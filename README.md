@@ -1,5 +1,9 @@
 # Heavstal Auth Provider
 
+<div align="center">
+  <img src="https://files.catbox.moe/u1hm7q.jpg" alt="Heavstal Logo" width="100" height="100" />
+</div>
+
 The official [NextAuth.js](https://next-auth.js.org/) (Auth.js) provider for **Heavstal Tech**.
 
 Easily integrate **"Sign in with Heavstal"** into your Next.js applications without manually configuring authorization URLs, token endpoints, or user profile mappings.
