@@ -17,8 +17,6 @@ export default function HeavstalProvider(
     id: "heavstal",
     name: "Heavstal Tech",
     type: "oauth",
-    clientId: options.clientId,
-    clientSecret: options.clientSecret,
     authorization: {
       url: "https://accounts-heavstal.vercel.app/oauth/authorize",
       params: { scope: "profile email" },
