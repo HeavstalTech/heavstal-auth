@@ -1,6 +1,6 @@
 {
   "name": "heavstal-auth",
-  "version": "1.0.0",
+  "version": "1.0.1", 
   "description": "The official NextAuth provider for Heavstal Tech.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,13 +12,16 @@
     "heavstal",
     "oauth",
     "provider",
-    "tech"
+    "tech",
+    "oauth2",
+    "HeavstalTech",
+    "Heavstal Tech"
   ],
   "author": "Heavstal Tech",
   "license": "MIT",
   "peerDependencies": {
     "next-auth": "^4.0.0",
-    "react": "^19.0.0"
+    "react": "^18.0.0 || ^19.0.0" 
   },
   "devDependencies": {
     "next-auth": "^4.24.5",
