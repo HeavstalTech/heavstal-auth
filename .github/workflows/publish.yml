@@ -3,7 +3,6 @@ name: Publish to NPM
 on:
   release:
     types: [created]
-  # Allows you to run this manually from the Actions tab for testing
   workflow_dispatch:
 
 jobs:
@@ -23,11 +22,9 @@ jobs:
         run: npm ci
 
       - name: Build Package
-        # This runs "tsc" to convert your TypeScript to JavaScript in the /dist folder
         run: npm run build
 
       - name: Publish to NPM
-        # Uses the token we will set up in repo settings
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
