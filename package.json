@@ -1,0 +1,24 @@
+{
+  "name": "heavstal-auth",
+  "version": "1.0.0",
+  "description": "The official NextAuth provider for Heavstal Tech.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "next-auth",
+    "heavstal",
+    "oauth",
+    "provider"
+  ],
+  "author": "Heavstal Tech",
+  "license": "MIT",
+  "peerDependencies": {
+    "next-auth": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
