@@ -16,9 +16,12 @@
   "author": "Heavstal Tech",
   "license": "MIT",
   "peerDependencies": {
-    "next-auth": "^4.0.0"
+    "next-auth": "^4.0.0",
+    "react": "^18.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0"
   }
 }
