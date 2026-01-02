@@ -1,17 +1,17 @@
 {
   "name": "heavstal-auth",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The official NextAuth provider for Heavstal Tech.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Promise818/heavstal-auth"
+    "url": "https://github.com/HeavstalTech/heavstal-auth"
   },
-  "homepage": "https://github.com/Promise818/heavstal-auth",
+  "homepage": "https://github.com/HeavstalTech/heavstal-auth",
   "bugs": {
-    "url": "https://github.com/Promise818/heavstal-auth/issues"
+    "url": "https://github.com/HeavstalTech/heavstal-auth/issues"
   },
   "scripts": {
     "build": "tsc"
