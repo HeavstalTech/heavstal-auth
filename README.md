@@ -131,5 +131,5 @@ interface HeavstalProfile {
 
 This project is licensed under the **MIT License**.
 
-Copyright © 2025 - 2026 **Heavstal Tech™**. All rights reserved.
-```
+Copyright © 2025 - {{YEAR}} **Heavstal Tech™**. All rights reserved
+
