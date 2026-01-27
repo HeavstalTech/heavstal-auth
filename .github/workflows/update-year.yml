@@ -1,0 +1,24 @@
+name: Update copyright year
+
+on:
+  schedule:
+    - cron: "0 0 1 1 *" # every Jan 1st
+  workflow_dispatch:
+
+jobs:
+  update-year:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update year
+        run: |
+          YEAR=$(date +%Y)
+          sed -i "s/{{YEAR}}/$YEAR/g" README.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git commit -am "chore: update copyright year" || exit 0
+          git push
