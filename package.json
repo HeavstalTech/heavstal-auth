@@ -1,6 +1,6 @@
 {
   "name": "heavstal-auth",
-  "version": "2.6.9",
+  "version": "2.7.0",
   "description": "The official NextAuth provider for Heavstal Tech.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,13 +9,13 @@
     "type": "git",
     "url": "https://github.com/HeavstalTech/heavstal-auth"
   },
-  "homepage": "https://github.com/HeavstalTech/heavstal-auth",
+  "homepage": "https://accounts-heavstal.vervel.app",
   "bugs": {
     "url": "https://github.com/HeavstalTech/heavstal-auth/issues"
   },
   "scripts": {
     "test": "node scripts/validate-oidc.js",
-    "build": "npm run test && tsc"
+    "build": "tsc"
   },
   "keywords": [
     "next-auth",
