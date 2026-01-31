@@ -16,10 +16,18 @@ export default function HeavstalProvider(
     id: "heavstal",
     name: "Heavstal Tech",
     type: "oauth",
-    wellKnown: "https://accounts-heavstal.vercel.app/.well-known/openid-configuration",
-    authorization: { params: { scope: "openid profile email" } },
-    idToken: true,
+    
+    // OAuth2 Endpoints
+    authorization: {
+      url: "https://accounts-heavstal.vercel.app/oauth/authorize",
+      params: { scope: "openid profile email" } 
+    },
+    token: "https://accounts-heavstal.vercel.app/api/oauth/token",
+    userinfo: "https://accounts-heavstal.vercel.app/api/oauth/userinfo",
+
+    // Security checks
     checks: ["pkce", "state"],
+
     profile(profile) {
       return {
         id: profile.sub,
