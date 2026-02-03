@@ -65,7 +65,7 @@ const handler = NextAuth({
       clientId: process.env.HEAVSTAL_CLIENT_ID!,
       clientSecret: process.env.HEAVSTAL_CLIENT_SECRET!,
       // you might need to add issuer failed depending on your configuration
-      issuer: https://accounts-heavstal.vervel.app,
+      issuer: "https://accounts-heavstal.vervel.app",
     }),
     // ...other providers
   ],
