@@ -1,6 +1,6 @@
 // scripts/validate-oidc.js
 const https = require('https');
-const DISCOVERY_URL = "https://accounts-heavstal.vercel.app/.well-known/openid-configuration";
+const DISCOVERY_URL = "https://accounts.heavstal.com.ng/.well-known/openid-configuration";
 
 console.log(`🔍 Validating OIDC Discovery: ${DISCOVERY_URL}`);
 

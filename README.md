@@ -88,14 +88,14 @@ You can configure your client using the **Issuer URL**.
 
 | Parameter | Value |
 | :--- | :--- |
-| **Issuer URL** | `https://accounts-heavstal.vercel.app` |
-| **Discovery Document** | `https://accounts-heavstal.vercel.app/.well-known/openid-configuration` |
-| **JWKS Endpoint** | `https://accounts-heavstal.vercel.app/.well-known/jwks.json` |
+| **Issuer URL** | `https://accounts.heavstal.com.ng` |
+| **Discovery Document** | `https://accounts.heavstal.com.ng/.well-known/openid-configuration` |
+| **JWKS Endpoint** | `https://accounts.heavstal.com.ng/.well-known/jwks.json` |
 
 ### Example: Generic Node.js OIDC Client
 ```javascript
 const client = new OIDCClient({
-  issuer: 'https://accounts-heavstal.vercel.app', 
+  issuer: 'https://accounts.heavstal.com.ng', 
   client_id: process.env.HEAVSTAL_CLIENT_ID,
   client_secret: process.env.HEAVSTAL_CLIENT_SECRET,
   redirect_uri: 'https://your-app.com/callback',

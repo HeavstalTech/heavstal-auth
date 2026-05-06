@@ -19,11 +19,11 @@ export default function HeavstalProvider(
     
     // OAuth2 Endpoints
     authorization: {
-      url: "https://accounts-heavstal.vercel.app/oauth/authorize",
+      url: "https://accounts.heavstal.com.ng/oauth/authorize",
       params: { scope: "openid profile email" } 
     },
-    token: "https://accounts-heavstal.vercel.app/api/oauth/token",
-    userinfo: "https://accounts-heavstal.vercel.app/api/oauth/userinfo",
+    token: "https://accounts.heavstal.com.ng/api/oauth/token",
+    userinfo: "https://accounts.heavstal.com.ng/api/oauth/userinfo",
 
     // Security checks
     checks: ["pkce", "state"],
