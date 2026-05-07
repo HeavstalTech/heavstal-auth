@@ -37,7 +37,7 @@ export default function HeavstalProvider(
       };
     },
     style: {
-      logo: "https://heavstal-tech.vercel.app/ht_icon.svg",
+      logo: "https://heavstal.com.ng/ht_icon.svg",
       bg: "#000",
       text: "#fff",
     },

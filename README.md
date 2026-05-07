@@ -40,7 +40,7 @@ pnpm add heavstal-auth
 ## Configuration
 
 ### 1. Obtain Credentials
-Register your application in the [Heavstal Developer Console](https://heavstal-tech.vercel.app/oauth/apps) to obtain your **Client ID** and **Client Secret**.
+Register your application in the [Heavstal Developer Console](https://heavstal.com.ng/oauth/apps) to obtain your **Client ID** and **Client Secret**.
 
 ### 2. Environment Variables
 Add the following to your `.env` or `.env.local` file:
@@ -123,9 +123,9 @@ interface HeavstalProfile {
 
 ## Resources
 
-- [Developer Console](https://heavstal-tech.vercel.app/oauth/apps)
-- [API Documentation](https://heavstal-tech.vercel.app/docs/api/oauth-guide)
-- [Heavstal Platform](https://heavstal-tech.vercel.app)
+- [Developer Console](https://heavstal.com.ng/oauth/apps)
+- [API Documentation](https://heavstal.com.ng/docs/api/oauth-guide)
+- [Heavstal Platform](https://heavstal.com.ng)
 
 ---
 
