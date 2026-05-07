@@ -7,6 +7,10 @@
 [![License](https://img.shields.io/npm/l/heavstal-auth?style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/blob/main/LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/heavstal-auth?style=flat-square)](https://www.npmjs.com/package/heavstal-auth)
 
+> [!NOTE]
+> This version introduces breaking changes due to change of doamin, older versions are by defult deprecated, please install this version to keep your app running
+> 
+
 The official **[NextAuth.js](https://next-auth.js.org/)** (Auth.js) provider for the **Heavstal Tech Identity Platform**.
 
 This package enables seamless integration of **Heavstal OAuth 2.0 & OpenID Connect (OIDC)** authentication into Next.js and Node.js applications. It pre-configures authorization endpoints, token exchanges, and user profile mapping, ensuring security best practices.
