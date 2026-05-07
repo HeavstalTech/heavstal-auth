@@ -2,6 +2,7 @@
 // © HEAVSTAL TECH
 // Official NextAuth Provider
 
+// import type { OAuthConfig } from "@auth/core/providers"
 import type { OAuthConfig, OAuthUserConfig } from "next-auth/providers/oauth";
 
 export interface HeavstalProfile extends Record<string, any> {
@@ -12,27 +13,25 @@ export interface HeavstalProfile extends Record<string, any> {
 }
 
 export interface HeavstalProviderOptions extends OAuthUserConfig<HeavstalProfile> {
-  /**
-   * Choose the authentication protocol:
-   * - 'oidc' (Default): Uses OpenID Connect discovery & validates the JWT ID Token.
-   * - 'oauth2': Ignores the ID Token and fetches user data directly from the UserInfo API.
-   */
   mode?: "oidc" | "oauth2";
+  clientId: string;
+  clientSecret: string;
 }
 
 export default function HeavstalProvider(
   options: HeavstalProviderOptions
 ): OAuthConfig<HeavstalProfile> {
-  const mode = options.mode || "oidc";
-  const { mode: _mode, ...restOptions } = options;
+  const { mode = "oidc", clientId, clientSecret, ...restOptions } = options;
   
-  let config: Partial<OAuthConfig<HeavstalProfile>> = {
+  const config = {
     id: "heavstal",
     name: "Heavstal Tech",
-    type: mode === "oidc" ? "oidc" : "oauth",
-    checks:["pkce", "state"],
+    type: mode as "oauth" | "oidc",
+    clientId,
+    clientSecret,
+    checks: ["pkce", "state"],
     
-    profile(profile) {
+    profile(profile: HeavstalProfile) {
       return {
         id: profile.sub,
         name: profile.name,
@@ -45,30 +44,24 @@ export default function HeavstalProvider(
       bg: "#000",
       text: "#fff",
     },
-  };
-
-  if (mode === "oidc") {
-    // OIDC (recommended)
-    Object.assign(config, {
-      wellKnown: "https://accounts.heavstal.com.ng/.well-known/openid-configuration",
-      authorization: { params: { scope: "openid profile email" } },
-      idToken: true, 
-    });
-  } else {
-    // OAUTH2
-    Object.assign(config, {
-      authorization: {
-        url: "https://accounts.heavstal.com.ng/oauth/authorize",
-        params: { scope: "profile email" }
-      },
-      token: "https://accounts.heavstal.com.ng/api/oauth/token",
-      userinfo: "https://accounts.heavstal.com.ng/api/oauth/userinfo",
-      idToken: false,
-    });
-  }
-  
-  return {
-    ...(config as OAuthConfig<HeavstalProfile>),
+    
+    ...(mode === "oidc"
+      ? {
+          wellKnown: "https://accounts.heavstal.com.ng/.well-known/openid-configuration",
+          authorization: { params: { scope: "openid profile email" } },
+          idToken: true,
+        }
+      : {
+          authorization: {
+            url: "https://accounts.heavstal.com.ng/oauth/authorize",
+            params: { scope: "profile email" },
+          },
+          token: "https://accounts.heavstal.com.ng/api/oauth/token",
+          userinfo: "https://accounts.heavstal.com.ng/api/oauth/userinfo",
+          idToken: false,
+        }),
     ...restOptions,
   };
+  
+  return config as OAuthConfig<HeavstalProfile>;
 }
