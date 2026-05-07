@@ -9,8 +9,7 @@
 [![OIDC Check](https://img.shields.io/github/actions/workflow/status/HeavstalTech/heavstal-auth/validate-oidc.yml?label=OIDC%20Check&style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/actions)
 
 > [!NOTE]
-> This version introduces breaking changes due to change of doamin, older versions are by defult deprecated, please install this version to keep your app running
-> 
+> This version introduces breaking changes due to a change of domain. Older versions are by default deprecated. Please install this version to keep your app running.
 
 The official **[NextAuth.js](https://next-auth.js.org/)** (Auth.js) provider for the **Heavstal Tech Identity Platform**.
 
@@ -21,6 +20,7 @@ This package enables seamless integration of **Heavstal OAuth 2.0 & OpenID Conne
 ## Features
 
 - **Zero-Configuration:** Pre-configured endpoints for Heavstal Identity services.
+- **Dual-Protocol Support:** Seamlessly toggle between full OpenID Connect (OIDC) or pure OAuth 2.0 modes.
 - **OIDC Compliant:** Fully supports OpenID Connect discovery and ID Token verification.
 - **TypeScript Support:** Written in TypeScript with included type definitions.
 - **Secure Defaults:** Enforces `PKCE` (Proof Key for Code Exchange) and state verification by default.
@@ -54,8 +54,8 @@ HEAVSTAL_CLIENT_ID=ht_id_xxxxxxxxxxxx
 HEAVSTAL_CLIENT_SECRET=ht_secret_xxxxxxxxxxxx
 ```
 
-### 3. Usage with NextAuth.js
-Import `HeavstalProvider` and add it to your NextAuth configuration.
+### 3. Basic Usage (OIDC Mode)
+Import `HeavstalProvider` and add it to your NextAuth configuration. By default, the provider runs in modern `oidc` mode and uses our Discovery Document to fetch configurations automatically.
 
 **File:** `app/api/auth/[...nextauth]/route.ts` (App Router) or `pages/api/auth/[...nextauth].ts` (Pages Router).
 
@@ -64,20 +64,29 @@ import NextAuth from "next-auth";
 import HeavstalProvider from "heavstal-auth";
 
 const handler = NextAuth({
-  providers: [
+  providers:[
     HeavstalProvider({
       clientId: process.env.HEAVSTAL_CLIENT_ID!,
       clientSecret: process.env.HEAVSTAL_CLIENT_SECRET!,
-      // you might need to add issuer failed depending on your configuration
-      issuer: "https://accounts.heavstal.com.ng",
     }),
     // ...other providers
   ],
-  // Optional: Enable debug mode for development
-  debug: process.env.NODE_ENV === "development",
 });
 
 export { handler as GET, handler as POST };
+```
+
+### 4. Pure OAuth2 Mode (Bypassing JWKS)
+If your environment has strict edge-runtime limitations or you simply prefer not to deal with cryptographic JWT verification (JWKS), you can switch the provider into pure `oauth2` mode. 
+
+This forces NextAuth to ignore the `id_token` and fetch user data directly from the Heavstal `/userinfo` API instead.
+
+```typescript
+HeavstalProvider({
+  clientId: process.env.HEAVSTAL_CLIENT_ID!,
+  clientSecret: process.env.HEAVSTAL_CLIENT_SECRET!,
+  mode: "oauth2", // <--- Bypasses OIDC / JWKS validation
+})
 ```
 
 ---
@@ -128,8 +137,8 @@ interface HeavstalProfile {
 ## Resources
 
 - [Developer Console](https://heavstal.com.ng/oauth/apps)
-- [API Documentation](https://heavstal.com.ng/docs/api/oauth-guide)
-- [Heavstal Platform](https://heavstal.com.ng)
+-[API Documentation](https://heavstal.com.ng/docs/api/oauth-guide)
+-[Heavstal Platform](https://heavstal.com.ng)
 
 ---
 
@@ -137,5 +146,4 @@ interface HeavstalProfile {
 
 This project is licensed under the **MIT License**.
 
-Copyright © 2025 - 2026 **Heavstal Tech™**. All rights reserved
-
+Copyright © 2025 - 2026 **Heavstal Tech™**. All rights reserved.
