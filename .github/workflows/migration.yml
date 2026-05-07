@@ -26,7 +26,7 @@ jobs:
           const fs = require('fs');
           const path = require('path');
 
-          const oldUrl = /accounts-heavstal\.vercel\.app/g;
+          const oldUrl = /accounts-heavstal\.vervel\.app/g;
           const newDomain = 'accounts.heavstal.com.ng';
 
           function replaceInFiles(dir) {
