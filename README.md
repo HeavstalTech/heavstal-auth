@@ -6,6 +6,7 @@
 [![NPM Version](https://img.shields.io/npm/v/heavstal-auth?style=flat-square&color=blue)](https://www.npmjs.com/package/heavstal-auth)
 [![License](https://img.shields.io/npm/l/heavstal-auth?style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/blob/main/LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/heavstal-auth?style=flat-square)](https://www.npmjs.com/package/heavstal-auth)
+[![OIDC Check](https://img.shields.io/github/actions/workflow/status/HeavstalTech/heavstal-auth/validate-oidc.yml?label=OIDC%20Check&style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/actions)
 
 > [!NOTE]
 > This version introduces breaking changes due to change of doamin, older versions are by defult deprecated, please install this version to keep your app running
