@@ -2,8 +2,10 @@
 // © HEAVSTAL TECH
 // Official NextAuth Provider
 
+
 // import type { OAuthConfig } from "@auth/core/providers"
 import type { OAuthConfig, OAuthUserConfig } from "next-auth/providers/oauth";
+
 
 export interface HeavstalProfile extends Record<string, any> {
   sub: string;     
@@ -26,7 +28,8 @@ export default function HeavstalProvider(
   const config = {
     id: "heavstal",
     name: "Heavstal Tech",
-    type: mode as "oauth" | "oidc",
+   // type: mode as "oauth" | "oidc",
+    type: "oauth",
     clientId,
     clientSecret,
     checks: ["pkce", "state"],
