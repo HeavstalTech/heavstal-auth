@@ -1,6 +1,7 @@
 <div align="center">
   <img src="https://heavstal.com.ng/ht_icon.svg" width="120" alt="Heavstal Tech Logo" />
   <h1>Heavstal Auth Provider</h1>
+</div>
 
 [![NPM Version](https://img.shields.io/npm/v/heavstal-auth?style=flat-square&color=blue)](https://www.npmjs.com/package/heavstal-auth)
 [![License](https://img.shields.io/npm/l/heavstal-auth?style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/blob/main/LICENSE)
