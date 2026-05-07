@@ -1,4 +1,4 @@
-// scripts/validate-oidc.js
+// scripts/validate-oidc.mjs
 // © Heavstal Tech
 // Modify before re-use
 import https from 'https'
