@@ -14,7 +14,7 @@
     "url": "https://github.com/HeavstalTech/heavstal-auth/issues"
   },
   "scripts": {
-    "test": "node scripts/validate-oidc.js",
+    "test": "node scripts/validate-oidc.mjs",
     "build": "tsc"
   },
   "keywords": [
