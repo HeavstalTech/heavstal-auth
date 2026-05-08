@@ -8,8 +8,9 @@
 [![Downloads](https://img.shields.io/npm/dm/heavstal-auth?style=flat-square)](https://www.npmjs.com/package/@heavstal/auth)
 [![OIDC Check](https://img.shields.io/github/actions/workflow/status/HeavstalTech/heavstal-auth/validate-oidc.yml?label=OIDC%20Check&style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/actions)
 
-> [!NOTE]
-> This version introduces breaking changes due to a change of domain. Older versions are by default deprecated. Please install this version to keep your app running.
+> [!WARNING]
+> **Migration Notice:** `heavstal-auth` has been renamed to **[@heavstal/auth](https://www.npmjs.com/package/@heavstal/auth)**. 
+> The legacy `heavstal-auth` package is now deprecated. Please update your dependencies to continue receiving security updates and new features.
 
 The official **[NextAuth.js](https://next-auth.js.org/)** (Auth.js) provider for the **Heavstal Tech Identity Platform**.
 
@@ -32,11 +33,11 @@ This package enables seamless integration of **Heavstal OAuth 2.0 & OpenID Conne
 Ensure you have `next-auth` installed in your project.
 
 ```bash
-npm install heavstal-auth
+npm install @heavstal/auth
 # or
-yarn add heavstal-auth
+yarn add @heavstal/auth
 # or
-pnpm add heavstal-auth
+pnpm add @heavstal/auth
 ```
 
 ---
@@ -61,7 +62,7 @@ Import `HeavstalProvider` and add it to your NextAuth configuration. By default,
 
 ```typescript
 import NextAuth from "next-auth";
-import HeavstalProvider from "heavstal-auth";
+import HeavstalProvider from "@heavstal/auth";
 
 const handler = NextAuth({
   providers:[
@@ -85,7 +86,7 @@ This forces NextAuth to ignore the `id_token` and fetch user data directly from 
 HeavstalProvider({
   clientId: process.env.HEAVSTAL_CLIENT_ID!,
   clientSecret: process.env.HEAVSTAL_CLIENT_SECRET!,
-  mode: "oauth2", // <--- Bypasses OIDC / JWKS validation
+  mode: "oauth2", // <-- skips OIDC / JWKS validation
 })
 ```
 
@@ -137,8 +138,8 @@ interface HeavstalProfile {
 ## Resources
 
 - [Developer Console](https://heavstal.com.ng/oauth/apps)
--[API Documentation](https://heavstal.com.ng/docs/api/oauth-guide)
--[Heavstal Platform](https://heavstal.com.ng)
+- [API Documentation](https://heavstal.com.ng/docs/api/oauth-guide)
+- [Heavstal Platform](https://heavstal.com.ng)
 
 ---
 
