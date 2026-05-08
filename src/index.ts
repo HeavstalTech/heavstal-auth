@@ -2,6 +2,17 @@
 // © HEAVSTAL TECH
 // Official NextAuth Provider
 
+// Migration Notice for Heavstal Auth
+if (process.env.NODE_ENV !== 'production' || typeof window === 'undefined') {
+  console.warn(
+    "\x1b[33m%s\x1b[0m",
+    "\n[HEAVSTAL TECH]  DEPRECATION NOTICE:",
+    "\nThe package 'heavstal-auth' has been moved to '@heavstal/auth'.",
+    "\nThis version is no longer maintained and will not receive security updates.",
+    "\n\nRun: npm install @heavstal/auth",
+    "\nVisit: https://www.npmjs.com/package/@heavstal/auth\n"
+  );
+}
 
 // import type { OAuthConfig } from "@auth/core/providers"
 import type { OAuthConfig, OAuthUserConfig } from "next-auth/providers/oauth";
