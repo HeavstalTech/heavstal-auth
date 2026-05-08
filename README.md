@@ -3,9 +3,9 @@
   <h1>@heavstal/auth</h1>
 </div>
 
-[![NPM Version](https://img.shields.io/npm/v/heavstal-auth?style=flat-square&color=blue)](https://www.npmjs.com/package/@heavstal/auth)
+[![NPM Version](https://img.shields.io/npm/v/@heavstal/auth?style=flat-square&color=blue)](https://www.npmjs.com/package/@heavstal/auth)
 [![License](https://img.shields.io/npm/l/heavstal-auth?style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/blob/main/LICENSE)
-[![Downloads](https://img.shields.io/npm/dm/heavstal-auth?style=flat-square)](https://www.npmjs.com/package/@heavstal/auth)
+[![Downloads](https://img.shields.io/npm/dm/@heavstal/auth?style=flat-square)](https://www.npmjs.com/package/@heavstal/auth)
 [![OIDC Check](https://img.shields.io/github/actions/workflow/status/HeavstalTech/heavstal-auth/validate-oidc.yml?label=OIDC%20Check&style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/actions)
 
 > [!WARNING]
