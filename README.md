@@ -1,18 +1,15 @@
 <div align="center">
   <img src="https://heavstal.com.ng/ht_icon.svg" width="120" alt="Heavstal Tech Logo" />
-  <h1>Heavstal Auth Provider</h1>
+  <h1>@heavstal/auth</h1>
 </div>
 
-[![NPM Version](https://img.shields.io/npm/v/heavstal-auth?style=flat-square&color=blue)](https://www.npmjs.com/package/heavstal-auth)
+[![NPM Version](https://img.shields.io/npm/v/heavstal-auth?style=flat-square&color=blue)](https://www.npmjs.com/package/@heavstal/auth)
 [![License](https://img.shields.io/npm/l/heavstal-auth?style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/blob/main/LICENSE)
-[![Downloads](https://img.shields.io/npm/dm/heavstal-auth?style=flat-square)](https://www.npmjs.com/package/heavstal-auth)
+[![Downloads](https://img.shields.io/npm/dm/heavstal-auth?style=flat-square)](https://www.npmjs.com/package/@heavstal/auth)
 [![OIDC Check](https://img.shields.io/github/actions/workflow/status/HeavstalTech/heavstal-auth/validate-oidc.yml?label=OIDC%20Check&style=flat-square)](https://github.com/HeavstalTech/heavstal-auth/actions)
 
 > [!NOTE]
 > This version introduces breaking changes due to a change of domain. Older versions are by default deprecated. Please install this version to keep your app running.
-
-> [!IMPORTANT]
-> This package has been moved to [@heavstal/auth](https://www.npmjs.com/package/@heavstal/auth) and is no longer maintained, please migrate as soon as possible to receive new updates
 
 The official **[NextAuth.js](https://next-auth.js.org/)** (Auth.js) provider for the **Heavstal Tech Identity Platform**.
 
