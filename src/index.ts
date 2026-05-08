@@ -2,6 +2,7 @@
 // © HEAVSTAL TECH
 // Official NextAuth Provider
 
+/* 
 // Migration Notice for Heavstal Auth
 if (process.env.NODE_ENV !== 'production' || typeof window === 'undefined') {
   console.warn(
@@ -13,6 +14,7 @@ if (process.env.NODE_ENV !== 'production' || typeof window === 'undefined') {
     "\nVisit: https://www.npmjs.com/package/@heavstal/auth\n"
   );
 }
+*/
 
 // import type { OAuthConfig } from "@auth/core/providers"
 import type { OAuthConfig, OAuthUserConfig } from "next-auth/providers/oauth";
