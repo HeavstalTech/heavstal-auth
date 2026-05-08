@@ -11,6 +11,9 @@
 > [!NOTE]
 > This version introduces breaking changes due to a change of domain. Older versions are by default deprecated. Please install this version to keep your app running.
 
+> [!IMPORTANT]
+> This package has been moved to [@heavstal/auth]() and is no longer maintained, please migrate as soon as possible to receive new updates
+
 The official **[NextAuth.js](https://next-auth.js.org/)** (Auth.js) provider for the **Heavstal Tech Identity Platform**.
 
 This package enables seamless integration of **Heavstal OAuth 2.0 & OpenID Connect (OIDC)** authentication into Next.js and Node.js applications. It pre-configures authorization endpoints, token exchanges, and user profile mapping, ensuring security best practices.
